@@ -1,0 +1,54 @@
+# ==============================================================================
+# .gitignore — Progetto crescita biomassa (repo pubblico: SOLO codice)
+# ==============================================================================
+
+# --- Cartella con materiale NON pubblicato (dati reali, report, figure, note) ---
+_locale/
+
+# --- Output rigenerabili della pipeline ---
+outputs/
+# fit MCMC, oggetti compilati e figure prodotte dagli script
+*.rds
+*.RDS
+
+# --- Dati pesanti / oggetti R serializzati ---
+*.RData
+*.Rdata
+*.rda
+dati_modificati.Rdata
+
+# --- Ambiente e sessione R / RStudio ---
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# --- Binari CmdStan/Stan compilati ---
+R/modello
+R/*.exe
+*.o
+*.hpp
+
+# --- PDF pesanti (report, paper, libri) ---
+*.pdf
+
+# --- File di sistema / editor ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Archivi ---
+*.zip
+
+# --- Prompt / note di lavoro locali ---
+github_ready_prompt.md
+progetto_brief.md
+cv-entry.md
+
+# ==============================================================================
+# NB: data/biomassa.xlsx (SINTETICO) e' volutamente NON ignorato: fa parte del
+#     repo per rendere la pipeline riproducibile. I dati reali non vanno qui.
+# ==============================================================================
